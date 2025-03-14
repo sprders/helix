@@ -178,11 +178,6 @@ jobs:
               mv bins-$platform/hx$exe $pkgname
               chmod +x $pkgname/hx$exe
 
-              if [[ "$platform" = "x86_64-linux" ]]; then
-                  mv bins-$platform/helix-*.AppImage* dist/
-                  mv bins-$platform/*.deb dist/
-              fi
-
               if [ "$exe" = "" ]; then
                   tar cJf dist/$pkgname.tar.xz $pkgname
               else
